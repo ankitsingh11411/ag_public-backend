@@ -12,7 +12,9 @@ const PORT = process.env.PORT || 5002;
 
 app.use(cors());
 app.use(express.json());
-
+app.get('/', (req, res) => {
+  res.send('Hello Automobile lovers and Autoglimpse users!');
+});
 app.use('/api/cars', carRoutes);
 
 app.listen(PORT, () => {
